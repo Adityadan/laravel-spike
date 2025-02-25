@@ -44,7 +44,6 @@
         <div class="dark-transparent sidebartoggler"></div>
     </div>
 </body>
-<script src="{{ asset('/assets/libs/sweetalert2/dist/sweetalert2.min.js')}}"></script>
 <script>
     $(document).ready(function() {
         $('#loginForm').submit(function(e) {
@@ -60,6 +59,8 @@
                     _token: "{{ csrf_token() }}"
                 },
                 success: function(response) {
+                    console.log(response);
+
                     if (response.success) {
                         Swal.fire({
                             icon: 'success',

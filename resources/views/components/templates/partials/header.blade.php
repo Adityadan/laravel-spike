@@ -14,6 +14,16 @@
     <!-- jvectormap  -->
     <link rel="stylesheet" href="{{ asset('/assets/libs/jvectormap/jquery-jvectormap.css') }}">
 
+    {{-- Jquery --}}
+    <script src="{{ asset('/assets/js/jquery/jquery.min.js') }}"></script>
+
+    {{-- Sweetalert --}}
+    <script src="{{ asset('/assets/libs/sweetalert2/dist/sweetalert2.min.js')}}"></script>
+
+    {{-- fontawesome --}}
+    <link href="{{ asset('assets/fontawesome/css/all.min.css') }}" rel="stylesheet">
+
+
     <script>
         document.addEventListener("DOMContentLoaded", function() {
             document.documentElement.setAttribute("data-bs-theme", "light");

@@ -10,12 +10,12 @@
     <div id="main-wrapper">
         <!-- Sidebar Start -->
 
-        @include('components.templates.partials.topbar')
+        @include('components.templates.partials.sidebar')
         <!--  Sidebar End -->
         <div class="page-wrapper">
-            @include('components.templates.partials.sidebar')
             <div class="body-wrapper">
                 <div class="container-fluid">
+                    @include('components.templates.partials.topbar')
                     {{ $slot }}
                 </div>
             </div>

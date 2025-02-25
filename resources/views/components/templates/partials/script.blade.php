@@ -1,4 +1,3 @@
-
 <script src="{{ asset('/assets/js/vendor.min.js') }}"></script>
 <!-- Import Js Files -->
 <script src="{{ asset('/assets/libs/bootstrap/dist/js/bootstrap.bundle.min.js') }}"></script>
@@ -17,4 +16,32 @@
 <script src="{{ asset('/assets/js/dashboards/dashboard.js') }}"></script>
 
 
+<script>
+    function logout() {
+        Swal.fire({
+            title: 'Are you sure?',
+            text: "You won't be able to revert this!",
+            icon: 'warning',
+            showCancelButton: true,
+            confirmButtonColor: '#3085d6',
+            cancelButtonColor: '#d33',
+            confirmButtonText: 'Yes, logout!'
+        }).then((result) => {
+            if (result.isConfirmed) {
+                $.post("{{ route('logout') }}", {
+                    _token: "{{ csrf_token() }}"
+                }).done(function() {
+                    window.location.href = "{{ route('login') }}";
+                }).fail(function(error) {
+                    console.log(error);
+                    Swal.fire({
+                        icon: 'error',
+                        title: 'Oops...',
+                        text: 'Something went wrong!'
+                    });
+                });
+            }
+        });
+    }
+</script>
 @stack('scripts')

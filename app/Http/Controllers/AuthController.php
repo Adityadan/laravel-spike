@@ -27,27 +27,33 @@ class AuthController extends Controller
     // Proses login
     public function login(Request $request)
     {
-        dd($request);
-        $credentials = $request->validate([
-            'email' => 'required|email',
-            'password' => 'required',
-        ]);
+        try {
+            $credentials = $request->validate([
+                'email' => 'required|email',
+                'password' => 'required',
+            ]);
+        } catch (ValidationException $e) {
+            $errors = implode(' ', array_map(function ($messages) {
+                return implode(' ', $messages);
+            }, $e->errors()));
+            return response($errors, 422);
+        }
 
         $key = 'login-attempts:' . $request->ip();
 
         if (RateLimiter::tooManyAttempts($key, 5)) {
-            return response()->json(['error' => 'Too many login attempts. Please try again later.'], 429);
+            return response()->json(['success' => false, 'message' => 'To many attempts, please try again later.']);
         }
 
         if (Auth::attempt($credentials)) {
             $request->session()->regenerate();
             RateLimiter::clear($key);
-            return response()->json(['success' => 'Login Berhasil'], 200);
+            return response()->json(['success' => true, 'message' => 'Login Successful']);
         }
 
         RateLimiter::hit($key, 60);
 
-        return response()->json(['error' => 'Email Atau Password Salah'], 401);
+        return response()->json(['success' => false, 'message' => 'Username or password is incorrect.']);
     }
 
     // Menampilkan halaman registrasi
@@ -59,11 +65,18 @@ class AuthController extends Controller
     // Proses registrasi
     public function register(Request $request)
     {
-        $request->validate([
-            'name' => 'required|string|max:255',
-            'email' => 'required|string|email|max:255|unique:users',
-            'password' => 'required|string|min:8|confirmed',
-        ]);
+        try {
+            $request->validate([
+                'name' => 'required|string|max:255',
+                'email' => 'required|string|email|max:255|unique:users',
+                'password' => 'required|string|min:8|confirmed',
+            ]);
+        } catch (ValidationException $e) {
+            $errors = implode(' ', array_map(function ($messages) {
+                return implode(' ', $messages);
+            }, $e->errors()));
+            return response()->json(['success' => false, 'message' => $errors]);
+        }
 
         $user = User::create([
             'name' => $request->name,
@@ -73,7 +86,7 @@ class AuthController extends Controller
 
         Auth::login($user); // Login user setelah registrasi
 
-        return redirect('/'); // Redirect ke halaman setelah registrasi
+        return response()->json(['success' => true, 'message' => 'Registration Complete']);
     }
 
     // Proses logout
@@ -82,6 +95,6 @@ class AuthController extends Controller
         Auth::logout();
         $request->session()->invalidate();
         $request->session()->regenerateToken();
-        return redirect('/');
+        return redirect('/login');
     }
 }
