@@ -4,6 +4,9 @@
 @include('components.templates.partials.header')
 
 <body>
+    <div class="preloader">
+        <img src="{{ asset('/assets/images/logos/loader.svg') }}" alt="loader" class="lds-ripple img-fluid" />
+    </div>
     <div id="main-wrapper" class="p-0 bg-white">
         <div
             class="position-relative overflow-hidden radial-gradient min-vh-100 d-flex align-items-center justify-content-center">
@@ -13,8 +16,9 @@
                         <div class="card-body">
                             <a href="../dark/index.html"
                                 class="text-nowrap logo-img text-center d-flex align-items-center justify-content-center mb-5 w-100">
-                                <img src="{{ asset('/assets/images/logos/logo-light.svg') }}" class="light-logo"
-                                    alt="Logo-Dark" />
+                                {{-- <img src="{{ asset('/assets/images/logos/logo-light.svg') }}" class="light-logo"
+                                    alt="Logo-Dark" /> --}}
+                                    <h1>SIMONCROT</h1>
                             </a>
                             <form class="mt-2" id="registerForm">
                                 <div class="mb-3">
@@ -62,6 +66,8 @@
     </div>
 
 </body>
+@include('components.templates.partials.script')
+
 <script>
     $('#registerForm').submit(function(e) {
         e.preventDefault();

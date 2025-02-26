@@ -36,7 +36,7 @@ class AuthController extends Controller
             $errors = implode(' ', array_map(function ($messages) {
                 return implode(' ', $messages);
             }, $e->errors()));
-            return response($errors, 422);
+            return response()->json(['success' => false, 'message' => $errors]);
         }
 
         $key = 'login-attempts:' . $request->ip();
@@ -48,7 +48,7 @@ class AuthController extends Controller
         if (Auth::attempt($credentials)) {
             $request->session()->regenerate();
             RateLimiter::clear($key);
-            return response()->json(['success' => true, 'message' => 'Login Successful']);
+            return response()->json(['success' => true, 'message' => 'Welcome back, ' . Auth::user()->name]);
         }
 
         RateLimiter::hit($key, 60);

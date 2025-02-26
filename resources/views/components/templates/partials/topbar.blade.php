@@ -34,7 +34,7 @@
                                                         class="d-flex align-items-center pb-9 position-relative text-decoration-none text-decoration-none text-decoration-none text-decoration-none">
                                                         <div
                                                             class="bg-light-subtle rounded-1 me-3 p-6 d-flex align-items-center justify-content-center">
-                                                            <img src="../assets/images/svgs/icon-dd-chat.svg"
+                                                            <img src="{{ asset('assets/images/svgs/icon-dd-chat.svg') }}"
                                                                 alt="" class="img-fluid" width="24"
                                                                 height="24">
                                                         </div>
@@ -49,7 +49,7 @@
                                                         class="d-flex align-items-center pb-9 position-relative text-decoration-none text-decoration-none text-decoration-none text-decoration-none">
                                                         <div
                                                             class="bg-light-subtle rounded-1 me-3 p-6 d-flex align-items-center justify-content-center">
-                                                            <img src="../assets/images/svgs/icon-dd-invoice.svg"
+                                                            <img src="{{ asset('assets/images/svgs/icon-dd-invoice.svg') }}"
                                                                 alt="" class="img-fluid" width="24"
                                                                 height="24">
                                                         </div>
@@ -64,7 +64,7 @@
                                                         class="d-flex align-items-center pb-9 position-relative text-decoration-none text-decoration-none text-decoration-none text-decoration-none">
                                                         <div
                                                             class="bg-light-subtle rounded-1 me-3 p-6 d-flex align-items-center justify-content-center">
-                                                            <img src="../assets/images/svgs/icon-dd-mobile.svg"
+                                                            <img src="{{ asset('assets/images/svgs/icon-dd-mobile.svg') }}"
                                                                 alt="" class="img-fluid" width="24"
                                                                 height="24">
                                                         </div>
@@ -79,7 +79,7 @@
                                                         class="d-flex align-items-center pb-9 position-relative text-decoration-none text-decoration-none text-decoration-none text-decoration-none">
                                                         <div
                                                             class="bg-light-subtle rounded-1 me-3 p-6 d-flex align-items-center justify-content-center">
-                                                            <img src="../assets/images/svgs/icon-dd-message-box.svg"
+                                                            <img src="{{ asset('assets/images/svgs/icon-dd-message-box.svg') }}"
                                                                 alt="" class="img-fluid" width="24"
                                                                 height="24">
                                                         </div>
@@ -98,7 +98,7 @@
                                                         class="d-flex align-items-center pb-9 position-relative text-decoration-none text-decoration-none text-decoration-none text-decoration-none">
                                                         <div
                                                             class="bg-light-subtle rounded-1 me-3 p-6 d-flex align-items-center justify-content-center">
-                                                            <img src="../assets/images/svgs/icon-dd-cart.svg"
+                                                            <img src="{{ asset('assets/images/svgs/icon-dd-cart.svg') }}"
                                                                 alt="" class="img-fluid" width="24"
                                                                 height="24">
                                                         </div>
@@ -113,7 +113,7 @@
                                                         class="d-flex align-items-center pb-9 position-relative text-decoration-none text-decoration-none text-decoration-none text-decoration-none">
                                                         <div
                                                             class="bg-light-subtle rounded-1 me-3 p-6 d-flex align-items-center justify-content-center">
-                                                            <img src="../assets/images/svgs/icon-dd-date.svg"
+                                                            <img src="{{ asset('assets/images/svgs/icon-dd-date.svg') }}"
                                                                 alt="" class="img-fluid" width="24"
                                                                 height="24">
                                                         </div>
@@ -128,7 +128,7 @@
                                                         class="d-flex align-items-center pb-9 position-relative text-decoration-none text-decoration-none text-decoration-none text-decoration-none">
                                                         <div
                                                             class="bg-light-subtle rounded-1 me-3 p-6 d-flex align-items-center justify-content-center">
-                                                            <img src="../assets/images/svgs/icon-dd-lifebuoy.svg"
+                                                            <img src="{{ asset('assets/images/svgs/icon-dd-lifebuoy.svg') }}"
                                                                 alt="" class="img-fluid" width="24"
                                                                 height="24">
                                                         </div>
@@ -143,7 +143,7 @@
                                                         class="d-flex align-items-center pb-9 position-relative text-decoration-none text-decoration-none text-decoration-none text-decoration-none">
                                                         <div
                                                             class="bg-light-subtle rounded-1 me-3 p-6 d-flex align-items-center justify-content-center">
-                                                            <img src="../assets/images/svgs/icon-dd-application.svg"
+                                                            <img src="{{ asset('assets/images/svgs/icon-dd-application.svg') }}"
                                                                 alt="" class="img-fluid" width="24"
                                                                 height="24">
                                                         </div>
@@ -231,8 +231,8 @@
             </ul>
 
             <div class="d-block d-lg-none">
-                <img src="../assets/images/logos/logo-light.svg" class="dark-logo" alt="Logo-Dark" />
-                <img src="../assets/images/logos/logo-dark.svg" class="light-logo" alt="Logo-light" />
+                <img src="{{ asset('assets/images/logos/logo-light.svg') }}" class="dark-logo" alt="Logo-Dark" />
+                <img src="{{ asset('assets/images/logos/logo-dark.svg') }}" class="light-logo" alt="Logo-light" />
             </div>
 
 
@@ -488,7 +488,7 @@
                                     <a href="javascript:void(0)"
                                         class="dropdown-item px-7 d-flex align-items-center py-6">
                                         <span class="flex-shrink-0">
-                                            <img src="../assets/images/profile/user-2.jpg" alt="user"
+                                            <img src="{{ asset('assets/images/profile/user-2.jpg') }}" alt="user"
                                                 width="45" class="rounded-circle" />
                                         </span>
                                         <div class="w-100 d-inline-block v-middle ps-3">
@@ -508,7 +508,7 @@
                                     <a href="javascript:void(0)"
                                         class="dropdown-item px-7 d-flex align-items-center py-6">
                                         <span class="flex-shrink-0">
-                                            <img src="../assets/images/profile/user-3.jpg" alt="user"
+                                            <img src="{{ asset('assets/images/profile/user-3.jpg') }}" alt="user"
                                                 width="45" class="rounded-circle" />
                                         </span>
                                         <div class="w-100 d-inline-block v-middle ps-3">
@@ -528,7 +528,7 @@
                                     <a href="javascript:void(0)"
                                         class="dropdown-item px-7 d-flex align-items-center py-6">
                                         <span class="flex-shrink-0">
-                                            <img src="../assets/images/profile/user-4.jpg" alt="user"
+                                            <img src="{{ asset('assets/images/profile/user-4.jpg') }}" alt="user"
                                                 width="45" class="rounded-circle" />
                                         </span>
                                         <div class="w-100 d-inline-block v-middle ps-3">
@@ -548,7 +548,7 @@
                                     <a href="javascript:void(0)"
                                         class="dropdown-item px-7 d-flex align-items-center py-6">
                                         <span class="flex-shrink-0">
-                                            <img src="../assets/images/profile/user-5.jpg" alt="user"
+                                            <img src="{{ asset('assets/images/profile/user-5.jpg') }}" alt="user"
                                                 width="45" class="rounded-circle" />
                                         </span>
                                         <div class="w-100 d-inline-block v-middle ps-3">
@@ -568,7 +568,7 @@
                                     <a href="javascript:void(0)"
                                         class="dropdown-item px-7 d-flex align-items-center py-6">
                                         <span class="flex-shrink-0">
-                                            <img src="../assets/images/profile/user-6.jpg" alt="user"
+                                            <img src="{{ asset('assets/images/profile/user-6.jpg') }}" alt="user"
                                                 width="45" class="rounded-circle" />
                                         </span>
                                         <div class="w-100 d-inline-block v-middle ps-3">
@@ -623,7 +623,7 @@
                                     <a href="javascript:void(0)"
                                         class="dropdown-item px-2 d-flex align-items-center px-7 py-6">
                                         <span class="flex-shrink-0">
-                                            <img src="../assets/images/profile/user-2.jpg" alt="user"
+                                            <img src="{{ asset('assets/images/profile/user-2.jpg') }}" alt="user"
                                                 width="45" class="rounded-circle" />
                                         </span>
                                         <div class="w-75 d-inline-block v-middle ps-3">
@@ -639,7 +639,7 @@
                                     <a href="javascript:void(0)"
                                         class="dropdown-item px-2 d-flex align-items-center px-7 py-6">
                                         <span class="flex-shrink-0">
-                                            <img src="../assets/images/profile/user-3.jpg" alt="user"
+                                            <img src="{{ asset('assets/images/profile/user-3.jpg') }}" alt="user"
                                                 width="45" class="rounded-circle" />
                                         </span>
                                         <div class="w-75 d-inline-block v-middle ps-3">
@@ -655,7 +655,7 @@
                                     <a href="javascript:void(0)"
                                         class="dropdown-item px-2 d-flex align-items-center px-7 py-6">
                                         <span class="flex-shrink-0">
-                                            <img src="../assets/images/profile/user-4.jpg" alt="user"
+                                            <img src="{{ asset('assets/images/profile/user-4.jpg') }}" alt="user"
                                                 width="45" class="rounded-circle" />
                                         </span>
                                         <div class="w-75 d-inline-block v-middle ps-3">
@@ -671,7 +671,7 @@
                                     <a href="javascript:void(0)"
                                         class="dropdown-item px-2 d-flex align-items-center px-7 py-6">
                                         <span class="flex-shrink-0">
-                                            <img src="../assets/images/profile/user-5.jpg" alt="user"
+                                            <img src="{{ asset('assets/images/profile/user-5.jpg') }}" alt="user"
                                                 width="45" class="rounded-circle" />
                                         </span>
                                         <div class="w-75 d-inline-block v-middle ps-3">
@@ -687,7 +687,7 @@
                                     <a href="javascript:void(0)"
                                         class="dropdown-item px-2 d-flex align-items-center px-7 py-6">
                                         <span class="flex-shrink-0">
-                                            <img src="../assets/images/profile/user-6.jpg" alt="user"
+                                            <img src="{{ asset('assets/images/profile/user-6.jpg') }}" alt="user"
                                                 width="45" class="rounded-circle" />
                                         </span>
                                         <div class="w-75 d-inline-block v-middle ps-3">
@@ -720,7 +720,7 @@
                                 data-bs-toggle="dropdown" aria-expanded="false">
                                 <div class="d-flex align-items-center flex-shrink-0">
                                     <div class="user-profile me-sm-3 me-2">
-                                        <img src="../assets/images/profile/user-1.jpg" width="45"
+                                        <img src="{{ asset('assets/images/profile/user-1.jpg') }}" width="45"
                                             class="rounded-circle" alt="">
                                     </div>
                                     <span class="d-sm-none d-block"><iconify-icon
@@ -748,7 +748,7 @@
                                     </div>
 
                                     <div class="d-flex align-items-center mx-7 py-9 border-bottom">
-                                        <img src="../assets/images/profile/user-1.jpg" alt="user" width="90"
+                                        <img src="{{ asset('assets/images/profile/user-1.jpg') }}" alt="user" width="90"
                                             class="rounded-circle" />
                                         <div class="ms-4">
                                             <h4 class="mb-0 fs-5 fw-normal">Mike Nielsen</h4>

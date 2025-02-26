@@ -290,8 +290,8 @@
                                         <p class="text-muted mb-2">Full paid</p>
                                         <div class="progress bg-light-subtle w-100 h-4">
                                             <div class="progress-bar text-bg-success" role="progressbar"
-                                                aria-label="Example 4px high" style="width: 100%;" aria-valuenow="100"
-                                                aria-valuemin="0" aria-valuemax="100"></div>
+                                                aria-label="Example 4px high" style="width: 100%;"
+                                                aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
                                         </div>
                                     </td>
                                     <td>
@@ -337,8 +337,8 @@
                                         <p class="text-muted mb-2">Cancelled</p>
                                         <div class="progress bg-light-subtle w-100 h-4">
                                             <div class="progress-bar text-bg-danger" role="progressbar"
-                                                aria-label="Example 4px high" style="width: 100%;" aria-valuenow="100"
-                                                aria-valuemin="0" aria-valuemax="100"></div>
+                                                aria-label="Example 4px high" style="width: 100%;"
+                                                aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
                                         </div>
                                     </td>
                                     <td>
@@ -433,8 +433,8 @@
                                         <p class="text-muted mb-2">Full paid</p>
                                         <div class="progress bg-light-subtle w-100 h-4">
                                             <div class="progress-bar text-bg-success" role="progressbar"
-                                                aria-label="Example 4px high" style="width: 100%;" aria-valuenow="100"
-                                                aria-valuemin="0" aria-valuemax="100"></div>
+                                                aria-label="Example 4px high" style="width: 100%;"
+                                                aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
                                         </div>
                                     </td>
                                     <td class="border-bottom-0">
@@ -1025,7 +1025,8 @@
                                         class="page-link border-0 d-flex align-items-center text-muted fw-normal"
                                         href="#"><iconify-icon icon="solar:alt-arrow-left-line-duotone"
                                             class="fs-5"></iconify-icon>Previous</a></li>
-                                <li class="page-item"><a class="page-link border-0 d-flex align-items-center fw-normal"
+                                <li class="page-item"><a
+                                        class="page-link border-0 d-flex align-items-center fw-normal"
                                         href="#">Next<iconify-icon icon="solar:alt-arrow-right-line-duotone"
                                             class="fs-5"></iconify-icon></a></li>
                             </ul>
@@ -1035,5 +1036,13 @@
             </div>
         </div>
     </div>
-</x-layouts.app-layout>
 
+    @push('scripts')
+        <!-- solar icons -->
+        <script src="https://cdn.jsdelivr.net/npm/iconify-icon@1.0.8/dist/iconify-icon.min.js"></script>
+        <script src="{{ asset('/assets/libs/jvectormap/jquery-jvectormap.min.js') }}"></script>
+        <script src="{{ asset('/assets/libs/apexcharts/dist/apexcharts.min.js') }}"></script>
+        <script src="{{ asset('/assets/js/extra-libs/jvectormap/jquery-jvectormap-us-aea-en.js') }}"></script>
+        <script src="{{ asset('/assets/js/dashboards/dashboard.js') }}"></script>
+    @endpush
+</x-layouts.app-layout>
