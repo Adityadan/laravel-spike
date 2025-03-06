@@ -32,7 +32,7 @@
                                 </div>
                                 <div class="d-flex align-items-center justify-content-end mb-4">
 
-                                    <a class="text-primary fw-medium" href="javascript:void(0)">Forgot Password ?</a>
+                                    <a class="text-primary fw-medium" href="{{ route('password.request') }}">Forgot Password ?</a>
                                 </div>
                                 <button id="signInBtn" type="submit"
                                     class="btn btn-primary w-100 mb-4 rounded-pill">Sign In</button>

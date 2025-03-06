@@ -18,7 +18,7 @@
                                 class="text-nowrap logo-img text-center d-flex align-items-center justify-content-center mb-5 w-100">
                                 {{-- <img src="{{ asset('/assets/images/logos/logo-light.svg') }}" class="light-logo"
                                     alt="Logo-Dark" /> --}}
-                                    <h1>SIMONCROT</h1>
+                                <h1>SIMONCROT</h1>
                             </a>
                             <form class="mt-2" id="registerForm">
                                 <div class="mb-3">
@@ -31,24 +31,37 @@
                                     <input type="email" class="form-control" id="email"
                                         aria-describedby="emailHelp" />
                                 </div>
-                                <div class="input-group mb-4">
-                                    <input type="password" class="form-control" id="password" />
-                                    <button type="button" class="btn btn-outline-secondary toggle-password"
-                                        data-target="#password">
-                                        <i class="fas fa-eye"></i>
-                                    </button>
-                                </div>
-                                <div class="input-group">
-                                    <input type="password" class="form-control" id="password_confirmation" />
-                                    <button type="button" class="btn btn-outline-secondary toggle-password"
-                                        data-target="#password_confirmation">
-                                        <i class="fas fa-eye"></i>
-                                    </button>
-                                </div>
-                                <div class="mt-2 mb-4">
-                                    <div id="password_match" style="display: none; color: green;">Password Sama!</div>
-                                    <div id="password_not_match" style="display: none; color: red;">Password Tidak Sama!
+                                <div class="mb-4">
+                                    <label for="password" class="form-label fw-bold">Password</label>
+                                    <div class="input-group">
+                                        <input type="password" class="form-control" id="password" minlength="8" autocomplete="new-password" required />
+                                        <button type="button" class="btn btn-outline-primary toggle-password" data-target="#password" aria-label="Tampilkan password">
+                                            <i class="fas fa-eye"></i>
+                                        </button>
                                     </div>
+                                    <div class="password-strength mt-2" id="password-strength"></div>
+                                    <small class="form-text text-muted mt-1">Password harus minimal 8 karakter{{-- , mengandung huruf besar, huruf kecil, angka, dan simbol. --}}</small>
+                                </div>
+                                <div class="mb-4">
+                                    <label for="password_confirmation" class="form-label fw-bold">Confirm
+                                        Password</label>
+                                    <div class="input-group">
+                                        <input type="password" class="form-control" id="password_confirmation" autocomplete="new-password" />
+                                        <button type="button" class="btn btn-outline-primary toggle-password"
+                                            data-target="#password_confirmation" aria-label="Tampilkan password">
+                                            <i class="fas fa-eye"></i>
+                                        </button>
+                                    </div>
+                                    <div class="mt-2">
+                                        <div id="password_match" class="text-success" style="display: none;">
+                                            <i class="fas fa-check-circle me-1"></i> Password Sama!
+                                        </div>
+                                        <div id="password_not_match" class="text-danger" style="display: none;">
+                                            <i class="fas fa-exclamation-circle me-1"></i> Password Tidak Sama!
+                                        </div>
+                                    </div>
+                                    <small class="form-text text-muted mt-1">Masukkan password yang sama dengan yang di
+                                        atas.</small>
                                 </div>
                                 <button type="submit" class="btn btn-primary w-100 mb-4 rounded-pill">Sign Up</button>
                                 <div class="d-flex align-items-center">
@@ -136,7 +149,7 @@
             var confirmPassword = $("#password_confirmation").val();
 
             if (confirmPassword) {
-                if (password == confirmPassword ) {
+                if (password == confirmPassword) {
                     $("#password_match").show();
                     $("#password_not_match").hide();
                 } else {
